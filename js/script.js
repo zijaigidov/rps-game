@@ -4,7 +4,6 @@ function showGameInfo() {
   In this game, you will face the computer in a series of 5 rounds of Rock Paper Scissors.
   Choose between 'Rock', 'Paper' and 'Scissors in each of the rounds.
   At the end of the five rounds, a winner will be determined.
-  Whenever you're ready, input your choice in the console.
   The stakes are high, have you got it in you?
   `;
   console.log(message);
