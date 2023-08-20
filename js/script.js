@@ -34,3 +34,17 @@ function playRound(playerSelection, computerSelection) {
         : 'You win! Scissors beats paper';
   }
 }
+
+function isProper(playerSelection) {
+  switch (playerSelection) {
+    case 'rock':
+      return true;
+    case 'paper':
+      return true;
+    case 'scissors':
+      return true;
+    default:
+      return false;
+  }
+}
+
