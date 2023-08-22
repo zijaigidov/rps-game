@@ -48,3 +48,34 @@ function isProper(playerSelection) {
   }
 }
 
+function game() {
+  let numberOfWins = 0;
+  let numberOfDraws = 0;
+  let numberOfLosses = 0;
+
+  showGameInfo();
+  for (let round = 1; round <= 5; round++) {
+    let playerSelection = prompt(
+      'Rock, paper, scissors, shoot! (enter your move)',
+    );
+    playerSelection = playerSelection.toLowerCase();
+
+    while (!isProper(playerSelection)) {
+      playerSelection = prompt(
+        'You entered an invalid move. Try again\nRock, paper, scissors, shoot! (enter your move)',
+      );
+    }
+
+    computerSelection = getComputerChoice();
+    result = playRound(playerSelection, computerSelection);
+    console.log(result);
+
+    if (result.includes('win')) {
+      numberOfWins++;
+    } else if (result.includes('draw')) {
+      numberOfDraws++;
+    } else {
+      numberOfLosses++;
+    }
+  }
+}
