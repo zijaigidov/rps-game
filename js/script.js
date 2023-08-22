@@ -48,6 +48,16 @@ function isProper(playerSelection) {
   }
 }
 
+function showResult(wins, losses) {
+  const draws = 5 - wins - losses;
+  const result = wins > losses ? 'won' : wins === losses ? 'drew' : 'lost';
+  const message = `
+  The game ended with ${wins} wins, ${draws} draws and ${losses} losses.
+  Result: You ${result}!
+  `;
+  console.log(message);
+}
+
 function game() {
   let numberOfWins = 0;
   let numberOfDraws = 0;
@@ -78,4 +88,7 @@ function game() {
       numberOfLosses++;
     }
   }
+  showResult(numberOfWins, numberOfLosses);
 }
+
+game();
