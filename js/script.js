@@ -1,14 +1,3 @@
-function showGameInfo() {
-  const message = `
-  Welcome to Rock Paper Scissors! 
-  In this game, you will face the computer in a series of 5 rounds of Rock Paper Scissors.
-  Choose between 'Rock', 'Paper' and 'Scissors in each of the rounds.
-  At the end of the five rounds, a winner will be determined.
-  The stakes are high, have you got it in you?
-  `;
-  console.log(message);
-}
-
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3) + 1; // Random integer in the interval 1-3
   const computerChoice =
@@ -35,60 +24,10 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function isProper(playerSelection) {
-  switch (playerSelection) {
-    case 'rock':
-      return true;
-    case 'paper':
-      return true;
-    case 'scissors':
-      return true;
-    default:
-      return false;
-  }
-}
-
-function showResult(wins, losses) {
-  const draws = 5 - wins - losses;
-  const result = wins > losses ? 'won' : wins === losses ? 'drew' : 'lost';
-  const message = `
-  The game ended with ${wins} wins, ${draws} draws and ${losses} losses.
-  Result: You ${result}!
-  `;
-  console.log(message);
-}
-
 function game() {
   let numberOfWins = 0;
   let numberOfDraws = 0;
   let numberOfLosses = 0;
-
-  showGameInfo();
-  for (let round = 1; round <= 5; round++) {
-    let playerSelection = prompt(
-      'Rock, paper, scissors, shoot! (enter your move)',
-    );
-    playerSelection = playerSelection.toLowerCase();
-
-    while (!isProper(playerSelection)) {
-      playerSelection = prompt(
-        'You entered an invalid move. Try again\nRock, paper, scissors, shoot! (enter your move)',
-      );
-    }
-
-    computerSelection = getComputerChoice();
-    result = playRound(playerSelection, computerSelection);
-    console.log(result);
-
-    if (result.includes('win')) {
-      numberOfWins++;
-    } else if (result.includes('draw')) {
-      numberOfDraws++;
-    } else {
-      numberOfLosses++;
-    }
-  }
-  showResult(numberOfWins, numberOfLosses);
+  let playerSelection;
+  let computerSelection;
 }
-
-game();
