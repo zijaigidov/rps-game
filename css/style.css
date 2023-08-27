@@ -3,3 +3,7 @@
   padding: 0;
   margin: 0;
 }
+
+.background {
+  background: url(../images/sky.jpg) top center / cover no-repeat;
+}
