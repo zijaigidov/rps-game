@@ -39,14 +39,17 @@ main {
 
 .card {
   width: 300px;
-  background: #fff;
-  padding: 4px 0;
   border-radius: 40px;
+  background: linear-gradient(to bottom, hsl(35, 32%, 84%), #8c593b);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
 }
 
 .card > h2 {
   font-size: 28px;
+  padding: 8px 0 4px 0;
   border-bottom: 2px solid #000;
+  background: #a7c0a1;
 }
 
 figure {
