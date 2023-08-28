@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 * {
   box-sizing: border-box;
@@ -11,6 +12,8 @@ html {
 }
 
 body {
+  flex-direction: column;
+  gap: 64px;
   padding-top: 24px;
   background: url(../images/sky.jpg) top center / cover no-repeat;
 }
@@ -20,6 +23,65 @@ header > h1 {
   padding: 24px 36px;
   border-radius: 18px;
   background-color: gold;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Chewy', sans-serif;
+}
+
+.cards-container {
+  display: flex;
+}
+
+.card {
+  width: 300px;
+  background: #fff;
+  padding: 4px 0;
+  border-radius: 40px;
+}
+
+.card > h2 {
+  font-size: 28px;
+  border-bottom: 2px solid #000;
+}
+
+figure {
+  margin: 12px 0;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.circle-container {
+  padding: 30px;
+  width: 225px;
+  height: 225px;
+  border: 4px solid black;
+  border-radius: 50%;
+}
+
+img {
+  max-width: 100%;
+}
+
+figcaption {
+  font-size: 20px;
+  margin-top: -8px;
+}
+
+.result {
+  margin: 6.25% 48px 0 48px;
+}
+
+.result > h2 {
+  font-size: 28px;
+}
+
+.result > p {
+  font-size: 24px;
 }
 
 /* GENERAL CLASSES */
