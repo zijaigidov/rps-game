@@ -12,19 +12,28 @@ html {
 
 body {
   padding-top: 24px;
-}
-
-.background {
   background: url(../images/sky.jpg) top center / cover no-repeat;
 }
 
+/* HEADER */
 header > h1 {
   padding: 24px 36px;
   border-radius: 18px;
   background-color: gold;
 }
 
-.flex-center {
+/* GENERAL CLASSES */
+.main-center {
+  display: flex;
+  justify-content: center;
+}
+
+.cross-center {
+  display: flex;
+  align-items: center;
+}
+
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
