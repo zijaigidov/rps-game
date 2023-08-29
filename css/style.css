@@ -118,6 +118,24 @@ figcaption {
   transition: 0.05s;
 }
 
+#reset {
+  font-family: 'Chewy', sans-serif;
+  font-size: 20px;
+  padding: 6px 22px;
+  border: 3px solid black;
+  border-radius: 20px;
+  margin-top: -32px;
+  transition: 0.05s;
+}
+
+#reset:hover {
+  transform: scale(1.05);
+}
+
+#reset:active {
+  color: #6f6f6f;
+}
+
 /* FOOTER */
 footer {
   flex-direction: column;
