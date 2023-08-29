@@ -108,7 +108,7 @@ figcaption {
   transition: 0.05s;
 }
 
-.move-button:hover {
+button:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
@@ -126,10 +126,6 @@ figcaption {
   border-radius: 20px;
   margin-top: -32px;
   transition: 0.05s;
-}
-
-#reset:hover {
-  transform: scale(1.05);
 }
 
 #reset:active {
