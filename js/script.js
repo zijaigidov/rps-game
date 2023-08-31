@@ -20,8 +20,25 @@ const computerMoveContainer = document.querySelector(
 );
 const playerText = document.getElementById('player-text');
 const computerText = document.getElementById('computer-text');
-const buttons = document.querySelectorAll('.game-button');
+const playerWins = document.getElementById('wins');
+const playerLosses = document.getElementById('losses');
 
+const buttons = document.querySelectorAll('.game-button');
 buttons.forEach((btn) => {
   btn.addEventListener('click', (e) => game(e));
+});
+
+const buttonReset = document.getElementById('reset');
+buttonReset.addEventListener('click', () => {
+  const EMPTY_IMAGE = document.createElement('img');
+  EMPTY_IMAGE.setAttribute('src', '');
+  EMPTY_IMAGE.setAttribute('alt', '');
+  playerMoveContainer.firstChild.replaceWith(EMPTY_IMAGE.cloneNode());
+  computerMoveContainer.firstChild.replaceWith(EMPTY_IMAGE.cloneNode());
+
+  playerText.textContent = 'Your choice:';
+  computerText.textContent = "Computer's choice:";
+
+  playerWins.textContent = '0';
+  playerLosses.textContent = '0';
 });
