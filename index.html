@@ -15,50 +15,41 @@
       <h1>ROCK PAPER SCISSORS GAME</h1>
     </header>
     <main class="cross-center">
-      <section class="cards-container">
-        <section class="card">
+      <section class="cards">
+        <section class="player card">
           <h2>You</h2>
           <figure class="cross-center">
-            <div class="circle-container center">
+            <div class="img-container center">
               <img src="" alt="" />
             </div>
-            <figcaption>Your choice:&nbsp;</figcaption>
+            <figcaption id="player-text">Your choice:&nbsp;</figcaption>
           </figure>
         </section>
         <section class="result">
           <h2>Result</h2>
           <p><span id="wins">0</span>-<span class="losses">0</span></p>
         </section>
-        <section class="card">
+        <section class="computer card">
           <h2>Computer</h2>
           <figure class="cross-center">
-            <div class="circle-container center">
-              <img src="images/paper.png" alt="" />
+            <div class="img-container center">
+              <img src="" alt="" />
             </div>
-            <figcaption>Computer's choice:&nbsp;</figcaption>
+            <figcaption id="computer-text">Computer's choice:&nbsp;</figcaption>
           </figure>
         </section>
       </section>
       <section class="selection">
         <p>Make your selection!</p>
-        <section class="button-container center">
-          <button class="move-button">
-            <img
-              src="images/rock.png"
-              alt="A picture of a fist representing rock"
-            />
+        <section class="buttons center">
+          <button id="rock" class="game-button">
+            <img src="images/rock.png" alt="A picture of a fist representing rock"/>
           </button>
-          <button class="move-button">
-            <img
-              src="images/paper.png"
-              alt="A picture of an open hand representing paper"
-            />
+          <button id="paper" class="game-button">
+            <img src="images/paper.png" alt="A picture of an open hand representing paper"/>
           </button>
-          <button class="move-button">
-            <img
-              src="images/scissors.png"
-              alt="A picture of a hand with a pointed index and middle finger representing scissors"
-            />
+          <button id="scissors" class="game-button">
+            <img src="images/scissors.png" alt="A picture of a hand with a pointed index and middle finger representing scissors"/>
           </button>
         </section>
       </section>
