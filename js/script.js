@@ -10,6 +10,21 @@ function updatePlayerMove(event) {
   playerText.textContent = newText;
 }
 
+// This function returns a random integer between and including the two integer arguments
+function getRandomInt(lower, upper) {
+  if (!Number.isInteger(lower) || !Number.isInteger(upper)) {
+    return 'TypeError: Lower and/or upper bounds must be integers';
+  }
+  if (lower === upper) {
+    return 'Error: Lower bound cannot equal upper bound';
+  }
+  if (lower > upper) {
+    [lower, upper] = [upper, lower];
+  }
+  const range = upper - lower + 1;
+  return Math.floor(Math.random() * range) + lower;
+}
+
 function game(event) {
   updatePlayerMove(event);
 }
