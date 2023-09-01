@@ -61,6 +61,7 @@ figure {
 }
 
 .img-container {
+  background: whitesmoke;
   padding: 30px;
   width: 225px;
   height: 225px;
@@ -106,6 +107,10 @@ figcaption {
   border: 3px solid black;
   border-radius: 50%;
   transition: 0.05s;
+}
+
+button {
+  background: whitesmoke;
 }
 
 button:hover {
