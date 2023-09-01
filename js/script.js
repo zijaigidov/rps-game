@@ -5,7 +5,7 @@ function updatePlayerMove(event) {
 
   playerMoveContainer.replaceChild(
     moveImage.cloneNode(),
-    playerMoveContainer.firstChild,
+    playerMoveContainer.firstElementChild,
   );
   playerText.textContent = newText;
 }
@@ -48,8 +48,8 @@ buttonReset.addEventListener('click', () => {
   const EMPTY_IMAGE = document.createElement('img');
   EMPTY_IMAGE.setAttribute('src', '');
   EMPTY_IMAGE.setAttribute('alt', '');
-  playerMoveContainer.firstChild.replaceWith(EMPTY_IMAGE.cloneNode());
-  computerMoveContainer.firstChild.replaceWith(EMPTY_IMAGE.cloneNode());
+  playerMoveContainer.firstElementChild.replaceWith(EMPTY_IMAGE.cloneNode());
+  computerMoveContainer.firstElementChild.replaceWith(EMPTY_IMAGE.cloneNode());
 
   playerText.textContent = 'Your choice:';
   computerText.textContent = "Computer's choice:";
