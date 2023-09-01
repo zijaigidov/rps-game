@@ -25,8 +25,22 @@ function getRandomInt(lower, upper) {
   return Math.floor(Math.random() * range) + lower;
 }
 
+function updateComputerMove() {
+  const moveIndex = getRandomInt(0, 2);
+  const moveName = buttons[moveIndex].id;
+  const moveImage = buttons[moveIndex].firstElementChild;
+  const newText = `Computer's choice: ${moveName}`;
+
+  computerMoveContainer.replaceChild(
+    moveImage.cloneNode(),
+    computerMoveContainer.firstElementChild,
+  );
+  computerText.textContent = newText;
+}
+
 function game(event) {
   updatePlayerMove(event);
+  updateComputerMove();
 }
 
 const playerMoveContainer = document.querySelector('.player .img-container');
