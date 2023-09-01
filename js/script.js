@@ -53,9 +53,33 @@ function updateComputerMove() {
   computerText.textContent = newText;
 }
 
+function updateResult(result) {
+  playerMoveContainer.classList.remove('win', 'loss', 'draw');
+  computerMoveContainer.classList.remove('win', 'loss', 'draw');
+  switch (result) {
+    case 'win':
+      const wins = +playerWins.textContent + 1;
+      playerWins.textContent = wins;
+      playerMoveContainer.classList.add('win');
+      computerMoveContainer.classList.add('loss');
+      break;
+    case 'loss':
+      let losses = +playerLosses.textContent + 1;
+      playerLosses.textContent = losses;
+      playerMoveContainer.classList.add('loss');
+      computerMoveContainer.classList.add('win');
+      break;
+    default:
+      playerMoveContainer.classList.add('draw');
+      computerMoveContainer.classList.add('draw');
+      break;
+  }
+}
+
 function game(event) {
   updatePlayerMove(event);
   updateComputerMove();
+  updateResult(getResult(playerMove, computerMove));
 }
 
 let playerMove;
@@ -87,4 +111,7 @@ buttonReset.addEventListener('click', () => {
 
   playerWins.textContent = '0';
   playerLosses.textContent = '0';
+
+  playerMoveContainer.classList.remove('win', 'loss', 'draw');
+  computerMoveContainer.classList.remove('win', 'loss', 'draw');
 });

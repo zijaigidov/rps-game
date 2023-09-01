@@ -182,3 +182,15 @@ footer a:hover {
   justify-content: center;
   align-items: center;
 }
+
+.win {
+  border-color: green;
+}
+
+.loss {
+  border-color: red;
+}
+
+.draw {
+  border-color: grey;
+}
