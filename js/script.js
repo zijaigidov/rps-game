@@ -3,6 +3,7 @@ function updatePlayerMove(event) {
   const moveImage = event.currentTarget.querySelector('img');
   const newText = `Your choice: ${moveName}`;
 
+  playerMove = moveName;
   playerMoveContainer.replaceChild(
     moveImage.cloneNode(),
     playerMoveContainer.firstElementChild,
@@ -25,12 +26,26 @@ function getRandomInt(lower, upper) {
   return Math.floor(Math.random() * range) + lower;
 }
 
+function getResult(playerMove, computerMove) {
+  switch (playerMove) {
+    case computerMove:
+      return 'draw';
+    case 'rock':
+      return computerMove === 'scissors' ? 'win' : 'loss';
+    case 'paper':
+      return computerMove === 'rock' ? 'win' : 'loss';
+    default:
+      return computerMove === 'paper' ? 'win' : 'loss';
+  }
+}
+
 function updateComputerMove() {
   const moveIndex = getRandomInt(0, 2);
   const moveName = buttons[moveIndex].id;
   const moveImage = buttons[moveIndex].firstElementChild;
   const newText = `Computer's choice: ${moveName}`;
 
+  computerMove = moveName;
   computerMoveContainer.replaceChild(
     moveImage.cloneNode(),
     computerMoveContainer.firstElementChild,
@@ -43,6 +58,8 @@ function game(event) {
   updateComputerMove();
 }
 
+let playerMove;
+let computerMove;
 const playerMoveContainer = document.querySelector('.player .img-container');
 const computerMoveContainer = document.querySelector(
   '.computer .img-container',
